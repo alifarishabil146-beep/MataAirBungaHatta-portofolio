@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Air Bunga Hatta - Certificates</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            DEFAULT: '#7D1D28',
+                            dark: '#5A121B',
+                            light: '#9E2836',
+                            soft: '#FFF5F6',
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA820A'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F9FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7D1D28;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5A121B;
+        }
+
+        /* Glassmorphism effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(90, 18, 27, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Scroll Reveal Utility Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom subtle hover animation */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px -10px rgba(125, 29, 40, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-burgundy selection:text-white">
+
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <a href="index.html" class="flex items-center gap-3 group">
+   <div class="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-gold font-serif font-bold text-xl shadow-md">M</div>
+   <div><span class="font-serif text-lg font-bold text-burgundy tracking-tight block leading-tight">Mata Air Bunga Hatta</span><span class="text-xs text-slate-500 font-medium">Bachelor of Law (S.H.)</span></div>
+  </a>
+  <nav class="hidden md:flex items-center space-x-6 text-sm font-medium"><a href="about.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">About</a><a href="education.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Education</a><a href="experience.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Experience</a><a href="skills.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Skills</a><a href="certificates.html" class="text-burgundy font-bold hover:text-burgundy transition-colors py-1">Certificates</a></nav>
+  <div class="hidden md:flex"><a href="contact.html" class="px-5 py-2.5 rounded-full bg-burgundy text-white hover:bg-burgundy-dark font-medium text-sm transition-all shadow-md">Contact Me</a></div>
+  <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-burgundy hover:bg-slate-100"><i data-lucide="menu" class="w-6 h-6"></i></button>
+ </div>
+ <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4"><a href="about.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">About</a><a href="education.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Education</a><a href="experience.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Experience</a><a href="skills.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Skills</a><a href="certificates.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Certificates</a><a href="contact.html" class="mobile-link block w-full text-center px-4 py-3 rounded-xl bg-burgundy text-white font-medium shadow">Contact Me</a></div>
+</header>
+<div class="h-20"></div>
+<section id="certificates" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12 reveal">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-burgundy mb-2">Credentials</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Certificates & Achievements</h3>
+                <div class="w-16 h-1 bg-burgundy mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10 reveal">
+                <button onclick="filterCertificates('all')" class="cert-tab active px-5 py-2 rounded-full text-xs font-semibold transition-all bg-burgundy text-white shadow-sm" data-category="all">
+                    All Certificates
+                </button>
+                <button onclick="filterCertificates('legal')" class="cert-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200" data-category="legal">
+                    Legal Internships
+                </button>
+                <button onclick="filterCertificates('bem')" class="cert-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200" data-category="bem">
+                    BEM FH UA
+                </button>
+                <button onclick="filterCertificates('alsa')" class="cert-tab px-5 py-2 rounded-full text-xs font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200" data-category="alsa">
+                    ALSA LC UNAND
+                </button>
+            </div>
+
+            <!-- Certificate Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Cert 1: AGO -->
+                <div class="cert-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift reveal" data-category="legal">
+                    <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden group cursor-pointer" onclick="openCertModal('Sertifikat Magang Kejaksaan Agung RI', 'Kejaksaan Agung Republik Indonesia - Jaksa Agung Muda Bidang Tindak Pidana Umum (Jan-Feb 2025)', this.querySelector('img').getAttribute('src'))">
+                        <img src="images/sertifikat-1.jpg" alt="Kejaksaan Agung Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-burgundy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-xs gap-2">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                            <span>Click to Expand</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-burgundy">Legal Internship</span>
+                        <h5 class="font-serif font-bold text-slate-900 text-base mt-1">Kejaksaan Agung RI</h5>
+                        <p class="text-xs text-slate-500 mt-1">Internship Certificate at JAM PIDUM (2025)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Miko Kamal -->
+                <div class="cert-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift reveal" data-category="legal">
+                    <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden group cursor-pointer" onclick="openCertModal('Sertifikat Miko Kamal & Associates', 'Miko Kamal & Associates Law Firm - Corporate & Commercial Legal Intern (2026)', this.querySelector('img').getAttribute('src'))">
+                        <img src="images/sertifikat-2.jpg" alt="Miko Kamal Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-burgundy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-xs gap-2">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                            <span>Click to Expand</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-burgundy">Legal Internship</span>
+                        <h5 class="font-serif font-bold text-slate-900 text-base mt-1">Miko Kamal & Associates</h5>
+                        <p class="text-xs text-slate-500 mt-1">Legal Intern Certificate (2026)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Merah Mengabdi -->
+                <div class="cert-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift reveal" data-category="bem">
+                    <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden group cursor-pointer" onclick="openCertModal('Sertifikat Merah Mengabdi Vol 2', 'Secretary for Merah Mengabdi Vol 2 (2024) - BEM NM FHUA Community Service', this.querySelector('img').getAttribute('src'))">
+                        <img src="images/sertifikat-3.jpeg" alt="Merah Mengabdi Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-burgundy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-xs gap-2">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                            <span>Click to Expand</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-burgundy">BEM NM FHUA</span>
+                        <h5 class="font-serif font-bold text-slate-900 text-base mt-1">Merah Mengabdi Vol. 2</h5>
+                        <p class="text-xs text-slate-500 mt-1">Secretary Award Certificate (2024)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4: Merah Lestari -->
+                <div class="cert-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift reveal" data-category="bem">
+                    <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden group cursor-pointer" onclick="openCertModal('Sertifikat Merah Lestari', 'Treasurer for Merah Lestari (2023) - BEM NM FHUA Social & Environment', this.querySelector('img').getAttribute('src'))">
+                        <img src="images/sertifikat-4.jpeg" alt="Merah Lestari Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-burgundy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-xs gap-2">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                            <span>Click to Expand</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-burgundy">BEM NM FHUA</span>
+                        <h5 class="font-serif font-bold text-slate-900 text-base mt-1">Merah Lestari 2023</h5>
+                        <p class="text-xs text-slate-500 mt-1">Treasurer Certificate (2023)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 5: ALSA Active Member -->
+                <div class="cert-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift reveal" data-category="alsa">
+                    <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden group cursor-pointer" onclick="openCertModal('Official Member Certificate - ALSA', 'Official & Active Member Certificate - ALSA Local Chapter Universitas Andalas', this.querySelector('img').getAttribute('src'))">
+                        <img src="images/sertifikat-5.jpeg" alt="ALSA Member Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-burgundy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-xs gap-2">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                            <span>Click to Expand</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-burgundy">ALSA LC UNAND</span>
+                        <h5 class="font-serif font-bold text-slate-900 text-base mt-1">Official Member Certificate</h5>
+                        <p class="text-xs text-slate-500 mt-1">Active Membership Recognition (2026)</p>
+                    </div>
+                </div>
+
+                <!-- Cert 6: ALSA ALFEST / CLCC -->
+                <div class="cert-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover-lift reveal" data-category="alsa">
+                    <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden group cursor-pointer" onclick="openCertModal('ALSA Care & Legal Coaching Clinic 2025', 'Steering Committee - ALSA Care & Legal Coaching Clinic LC UNAND 2025', this.querySelector('img').getAttribute('src'))">
+                        <img src="images/sertifikat-6.jpeg" alt="ALSA CLCC Certificate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-burgundy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium text-xs gap-2">
+                            <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                            <span>Click to Expand</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-[10px] uppercase tracking-wider font-bold text-burgundy">ALSA LC UNAND</span>
+                        <h5 class="font-serif font-bold text-slate-900 text-base mt-1">ALSA CLCC 2025</h5>
+                        <p class="text-xs text-slate-500 mt-1">Steering Committee Certificate (2025)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- Lightbox Modal for Certificate Preview -->
+    <div id="cert-modal" onclick="if(event.target===this) closeCertModal()" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative transform transition-all">
+            <!-- Modal Header -->
+            <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
+                <div>
+                    <h4 id="modal-title" class="font-serif font-bold text-lg text-gold">Certificate Details</h4>
+                    <p id="modal-desc" class="text-xs text-slate-400">Description</p>
+                </div>
+                <button onclick="closeCertModal()" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-burgundy flex items-center justify-center transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <!-- Modal Body Image -->
+            <div class="p-4 bg-slate-950 flex justify-center">
+                <img id="modal-img" src="" alt="Foto sertifikat" onerror="this.style.display='none'; document.getElementById('modal-error').classList.remove('hidden')" onload="this.style.display='block'; document.getElementById('modal-error').classList.add('hidden')" class="max-h-[70vh] object-contain rounded-xl"><p id="modal-error" class="hidden text-center text-white text-sm p-8">Foto sertifikat belum ditemukan. Masukkan foto ke folder <b>images</b> dengan nama file yang sesuai.</p>
+            </div>
+        </div>
+    </div>
+
+    
+<button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-burgundy text-gold shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all hover:scale-110"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
+<script>
+lucide.createIcons();
+const mobileBtn=document.getElementById('mobile-menu-btn');
+const mobileMenu=document.getElementById('mobile-menu');
+if(mobileBtn && mobileMenu){mobileBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('.mobile-link').forEach(link=>link.addEventListener('click',()=>mobileMenu.classList.add('hidden')));}
+const revealElements=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('active');}),{threshold:0.1});revealElements.forEach(el=>revealObserver.observe(el));}else{revealElements.forEach(el=>el.classList.add('active'));}
+const navbar=document.getElementById('navbar'), backToTopBtn=document.getElementById('back-to-top');
+window.addEventListener('scroll',()=>{if(window.scrollY>50){navbar?.classList.add('shadow-md');backToTopBtn?.classList.remove('opacity-0','pointer-events-none');}else{navbar?.classList.remove('shadow-md');backToTopBtn?.classList.add('opacity-0','pointer-events-none');}});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function filterCertificates(category){document.querySelectorAll('.cert-tab').forEach(tab=>{if(tab.dataset.category===category){tab.classList.add('bg-burgundy','text-white');tab.classList.remove('bg-white','text-slate-600');}else{tab.classList.remove('bg-burgundy','text-white');tab.classList.add('bg-white','text-slate-600');}});document.querySelectorAll('.cert-card').forEach(card=>card.style.display=(category==='all'||card.dataset.category===category)?'block':'none');}
+function openCertModal(title,desc,imgSrc){const modal=document.getElementById('cert-modal');if(!modal)return;document.getElementById('modal-title').textContent=title;document.getElementById('modal-desc').textContent=desc;document.getElementById('modal-img').src=imgSrc;modal.classList.remove('hidden');}
+function closeCertModal(){document.getElementById('cert-modal')?.classList.add('hidden');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCertModal();});
+function handleFormSubmit(e){e.preventDefault();const toast=document.getElementById('form-toast');if(toast)toast.classList.remove('hidden');e.target.reset();setTimeout(()=>toast?.classList.add('hidden'),5000);}
+</script>
+</body>
+</html>

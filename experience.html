@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Air Bunga Hatta - Experience</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            DEFAULT: '#7D1D28',
+                            dark: '#5A121B',
+                            light: '#9E2836',
+                            soft: '#FFF5F6',
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA820A'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F9FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7D1D28;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5A121B;
+        }
+
+        /* Glassmorphism effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(90, 18, 27, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Scroll Reveal Utility Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom subtle hover animation */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px -10px rgba(125, 29, 40, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-burgundy selection:text-white">
+
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <a href="index.html" class="flex items-center gap-3 group">
+   <div class="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-gold font-serif font-bold text-xl shadow-md">M</div>
+   <div><span class="font-serif text-lg font-bold text-burgundy tracking-tight block leading-tight">Mata Air Bunga Hatta</span><span class="text-xs text-slate-500 font-medium">Bachelor of Law (S.H.)</span></div>
+  </a>
+  <nav class="hidden md:flex items-center space-x-6 text-sm font-medium"><a href="about.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">About</a><a href="education.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Education</a><a href="experience.html" class="text-burgundy font-bold hover:text-burgundy transition-colors py-1">Experience</a><a href="skills.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Skills</a><a href="certificates.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Certificates</a></nav>
+  <div class="hidden md:flex"><a href="contact.html" class="px-5 py-2.5 rounded-full bg-burgundy text-white hover:bg-burgundy-dark font-medium text-sm transition-all shadow-md">Contact Me</a></div>
+  <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-burgundy hover:bg-slate-100"><i data-lucide="menu" class="w-6 h-6"></i></button>
+ </div>
+ <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4"><a href="about.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">About</a><a href="education.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Education</a><a href="experience.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Experience</a><a href="skills.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Skills</a><a href="certificates.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Certificates</a><a href="contact.html" class="mobile-link block w-full text-center px-4 py-3 rounded-xl bg-burgundy text-white font-medium shadow">Contact Me</a></div>
+</header>
+<div class="h-20"></div>
+<section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-burgundy mb-2">Career Trajectory</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Work & Leadership Experience</h3>
+                <div class="w-16 h-1 bg-burgundy mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Professional Work Experience Grid -->
+            <div class="space-y-8 mb-16">
+                <h4 class="font-serif text-2xl font-bold text-slate-900 flex items-center gap-3">
+                    <i data-lucide="briefcase" class="w-6 h-6 text-burgundy"></i>
+                    <span>Professional Work Experience</span>
+                </h4>
+
+                <!-- Job 1: Self-Employed -->
+                <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 hover-lift reveal">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h5 class="font-serif text-xl font-bold text-burgundy">Independent Document Specialist</h5>
+                            <p class="text-sm font-semibold text-slate-700">Self-Employed (Freelance)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-burgundy/10 text-burgundy text-xs font-semibold self-start sm:self-auto">
+                            <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                            <span>2023 - Present</span>
+                        </span>
+                    </div>
+                    <ul class="space-y-2.5 text-sm text-slate-700 list-disc list-inside">
+                        <li>Supported <strong>150+ clients</strong> since 2023 in preparing legal research materials, academic theses, and court/legal documentation.</li>
+                        <li>Handled cross-disciplinary research across Political Science, Accounting, Engineering, Medicine, and Education.</li>
+                        <li>Adept at handling high-volume documentation under tight deadlines, while maintaining prompt communication and accommodating client revisions.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2: Miko Kamal -->
+                <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 hover-lift reveal">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h5 class="font-serif text-xl font-bold text-burgundy">Legal Intern</h5>
+                            <p class="text-sm font-semibold text-slate-700">Miko Kamal & Associates Law Firm</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-burgundy/10 text-burgundy text-xs font-semibold self-start sm:self-auto">
+                            <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                            <span>Jan 2026 - Feb 2026</span>
+                        </span>
+                    </div>
+                    <ul class="space-y-2.5 text-sm text-slate-700 list-disc list-inside">
+                        <li>Supported senior attorneys in client meetings involving a major hospital acquisition deal, contributing with thorough corporate legal research.</li>
+                        <li>Prepared detailed Minutes of Meeting (MoM), capturing crucial deal terms, strategic decisions, and operational action items.</li>
+                        <li>Assisted in drafting civil asset agreements and essential commercial contract documents.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3: AGO / Kejaksaan Agung -->
+                <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 hover-lift reveal">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h5 class="font-serif text-xl font-bold text-burgundy">Legal Intern</h5>
+                            <p class="text-sm font-semibold text-slate-700">Kejaksaan Agung Republik Indonesia (Attorney General's Office)</p>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-burgundy/10 text-burgundy text-xs font-semibold self-start sm:self-auto">
+                            <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                            <span>Jan 2025 - Feb 2025</span>
+                        </span>
+                    </div>
+                    <ul class="space-y-2.5 text-sm text-slate-700 list-disc list-inside">
+                        <li>Verified, structured, and managed criminal case records from pre-prosecution filings to P-21 notices and indictments while conducting targeted legal research and case law analysis.</li>
+                        <li>Accompanied the AGO prosecution team in live court proceedings for a major Money Laundering trial at the Central Jakarta District Court, observing first-hand the strategy behind high-stakes national cases.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Organizational & Leadership Experience Section -->
+            <div class="space-y-8">
+                <h4 class="font-serif text-2xl font-bold text-slate-900 flex items-center gap-3">
+                    <i data-lucide="users" class="w-6 h-6 text-burgundy"></i>
+                    <span>Organizational Leadership & Community Impact</span>
+                </h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Org 1: BEM FH UA -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover-lift reveal space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-burgundy/10 text-burgundy flex items-center justify-center font-bold">
+                                BEM
+                            </div>
+                            <div>
+                                <h5 class="font-serif font-bold text-slate-900">Student Executive Board (BEM)</h5>
+                                <p class="text-xs text-slate-500">Faculty of Law, Universitas Andalas</p>
+                            </div>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
+                            <li><strong>Secretary:</strong> Merah Mengabdi Volume 2 (2024) - Community Service in remote regions.</li>
+                            <li><strong>Treasurer:</strong> Merah Lestari (2023) - Environmental sustainability project.</li>
+                            <li><strong>Committee Member:</strong> LKMM-TD (2023) - Student Leadership Training.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Org 2: ALSA -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover-lift reveal space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-burgundy/10 text-burgundy flex items-center justify-center font-bold">
+                                ALSA
+                            </div>
+                            <div>
+                                <h5 class="font-serif font-bold text-slate-900">Asian Law Students' Association</h5>
+                                <p class="text-xs text-slate-500">Local Chapter Universitas Andalas</p>
+                            </div>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-2 list-disc list-inside">
+                            <li><strong>Steering Committee:</strong> ALSA Care & Legal Coaching Clinic (2025).</li>
+                            <li><strong>Secretary II:</strong> ALFEST 2024 (ALSA Festival Closing Ceremony).</li>
+                            <li>Active Official Member driving legal coaching and regional leadership initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-burgundy text-gold shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all hover:scale-110"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
+<script>
+lucide.createIcons();
+const mobileBtn=document.getElementById('mobile-menu-btn');
+const mobileMenu=document.getElementById('mobile-menu');
+if(mobileBtn && mobileMenu){mobileBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('.mobile-link').forEach(link=>link.addEventListener('click',()=>mobileMenu.classList.add('hidden')));}
+const revealElements=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('active');}),{threshold:0.1});revealElements.forEach(el=>revealObserver.observe(el));}else{revealElements.forEach(el=>el.classList.add('active'));}
+const navbar=document.getElementById('navbar'), backToTopBtn=document.getElementById('back-to-top');
+window.addEventListener('scroll',()=>{if(window.scrollY>50){navbar?.classList.add('shadow-md');backToTopBtn?.classList.remove('opacity-0','pointer-events-none');}else{navbar?.classList.remove('shadow-md');backToTopBtn?.classList.add('opacity-0','pointer-events-none');}});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function filterCertificates(category){document.querySelectorAll('.cert-tab').forEach(tab=>{if(tab.dataset.category===category){tab.classList.add('bg-burgundy','text-white');tab.classList.remove('bg-white','text-slate-600');}else{tab.classList.remove('bg-burgundy','text-white');tab.classList.add('bg-white','text-slate-600');}});document.querySelectorAll('.cert-card').forEach(card=>card.style.display=(category==='all'||card.dataset.category===category)?'block':'none');}
+function openCertModal(title,desc,imgSrc){const modal=document.getElementById('cert-modal');if(!modal)return;document.getElementById('modal-title').textContent=title;document.getElementById('modal-desc').textContent=desc;document.getElementById('modal-img').src=imgSrc;modal.classList.remove('hidden');}
+function closeCertModal(){document.getElementById('cert-modal')?.classList.add('hidden');}
+function handleFormSubmit(e){e.preventDefault();const toast=document.getElementById('form-toast');if(toast)toast.classList.remove('hidden');e.target.reset();setTimeout(()=>toast?.classList.add('hidden'),5000);}
+</script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Air Bunga Hatta - Skills</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            DEFAULT: '#7D1D28',
+                            dark: '#5A121B',
+                            light: '#9E2836',
+                            soft: '#FFF5F6',
+                        },
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA820A'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F9FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7D1D28;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5A121B;
+        }
+
+        /* Glassmorphism effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(90, 18, 27, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Scroll Reveal Utility Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom subtle hover animation */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px -10px rgba(125, 29, 40, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-burgundy selection:text-white">
+
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <a href="index.html" class="flex items-center gap-3 group">
+   <div class="w-10 h-10 rounded-full bg-burgundy flex items-center justify-center text-gold font-serif font-bold text-xl shadow-md">M</div>
+   <div><span class="font-serif text-lg font-bold text-burgundy tracking-tight block leading-tight">Mata Air Bunga Hatta</span><span class="text-xs text-slate-500 font-medium">Bachelor of Law (S.H.)</span></div>
+  </a>
+  <nav class="hidden md:flex items-center space-x-6 text-sm font-medium"><a href="about.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">About</a><a href="education.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Education</a><a href="experience.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Experience</a><a href="skills.html" class="text-burgundy font-bold hover:text-burgundy transition-colors py-1">Skills</a><a href="certificates.html" class="text-slate-600 hover:text-burgundy transition-colors py-1">Certificates</a></nav>
+  <div class="hidden md:flex"><a href="contact.html" class="px-5 py-2.5 rounded-full bg-burgundy text-white hover:bg-burgundy-dark font-medium text-sm transition-all shadow-md">Contact Me</a></div>
+  <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-burgundy hover:bg-slate-100"><i data-lucide="menu" class="w-6 h-6"></i></button>
+ </div>
+ <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4"><a href="about.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">About</a><a href="education.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Education</a><a href="experience.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Experience</a><a href="skills.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Skills</a><a href="certificates.html" class="mobile-link block text-slate-700 font-medium hover:text-burgundy py-2 border-b border-slate-100">Certificates</a><a href="contact.html" class="mobile-link block w-full text-center px-4 py-3 rounded-xl bg-burgundy text-white font-medium shadow">Contact Me</a></div>
+</header>
+<div class="h-20"></div>
+<section id="skills" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background subtle glow -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-burgundy/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-gold mb-2">Capabilities</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-white">Skills & Competencies</h3>
+                <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Skill Category 1: Legal & Administrative -->
+                <div class="bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-gold/50 transition-colors reveal">
+                    <div class="w-12 h-12 rounded-xl bg-burgundy/40 text-gold flex items-center justify-center">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-white">Legal & Compliance</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                            <span><strong>Legal Research & Regulatory Analysis:</strong> AGO & Law Firm experience.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                            <span><strong>Legal Drafting:</strong> Civil asset agreements & commercial contracts.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                            <span><strong>Document Archiving & Data Management:</strong> Case files & database structuring.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 2: Soft Skills -->
+                <div class="bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-gold/50 transition-colors reveal">
+                    <div class="w-12 h-12 rounded-xl bg-burgundy/40 text-gold flex items-center justify-center">
+                        <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-white">Soft Skills</h4>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-200 text-xs font-medium">Critical Thinking</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-200 text-xs font-medium">Collaboration</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-200 text-xs font-medium">Time Management</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-200 text-xs font-medium">Adaptability</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-200 text-xs font-medium">Leadership</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-200 text-xs font-medium">Public Speaking</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-200 text-xs font-medium">Attention to Detail</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3: Administration & Tools -->
+                <div class="bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-gold/50 transition-colors reveal">
+                    <div class="w-12 h-12 rounded-xl bg-burgundy/40 text-gold flex items-center justify-center">
+                        <i data-lucide="laptop" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-white">Tools & Software</h4>
+                    <div class="grid grid-cols-2 gap-3 pt-1 text-xs">
+                        <div class="p-2.5 rounded-lg bg-slate-700/60 border border-slate-600 flex items-center gap-2">
+                            <i data-lucide="file-text" class="w-4 h-4 text-blue-400"></i>
+                            <span>MS Word / Docs</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-700/60 border border-slate-600 flex items-center gap-2">
+                            <i data-lucide="presentation" class="w-4 h-4 text-orange-400"></i>
+                            <span>MS PowerPoint</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-700/60 border border-slate-600 flex items-center gap-2">
+                            <i data-lucide="table" class="w-4 h-4 text-green-400"></i>
+                            <span>MS Excel</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-700/60 border border-slate-600 flex items-center gap-2">
+                            <i data-lucide="palette" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Canva Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4: Business & Retail Operations -->
+                <div class="bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-gold/50 transition-colors reveal">
+                    <div class="w-12 h-12 rounded-xl bg-burgundy/40 text-gold flex items-center justify-center">
+                        <i data-lucide="store" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-white">Business Operations</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li>• Client-Facing Customer Service & Dispute Resolution</li>
+                        <li>• Stock Opname & Inventory Record Accuracy</li>
+                        <li>• Product Promotion & Sales Pitching</li>
+                        <li>• Cashier Systems & POS Register Handling</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 5: Languages -->
+                <div class="bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-gold/50 transition-colors reveal lg:col-span-2">
+                    <div class="w-12 h-12 rounded-xl bg-burgundy/40 text-gold flex items-center justify-center">
+                        <i data-lucide="languages" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-white">Languages</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-3 rounded-xl bg-slate-700/50 border border-slate-600">
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="font-semibold text-white">Indonesian</span>
+                                <span class="text-gold">Native / First Language</span>
+                            </div>
+                            <div class="w-full bg-slate-600 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gold h-full w-full"></div>
+                            </div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-700/50 border border-slate-600">
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="font-semibold text-white">English</span>
+                                <span class="text-gold">Intermediate Proficiency</span>
+                            </div>
+                            <div class="w-full bg-slate-600 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gold h-full w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-burgundy text-gold shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all hover:scale-110"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
+<script>
+lucide.createIcons();
+const mobileBtn=document.getElementById('mobile-menu-btn');
+const mobileMenu=document.getElementById('mobile-menu');
+if(mobileBtn && mobileMenu){mobileBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('.mobile-link').forEach(link=>link.addEventListener('click',()=>mobileMenu.classList.add('hidden')));}
+const revealElements=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('active');}),{threshold:0.1});revealElements.forEach(el=>revealObserver.observe(el));}else{revealElements.forEach(el=>el.classList.add('active'));}
+const navbar=document.getElementById('navbar'), backToTopBtn=document.getElementById('back-to-top');
+window.addEventListener('scroll',()=>{if(window.scrollY>50){navbar?.classList.add('shadow-md');backToTopBtn?.classList.remove('opacity-0','pointer-events-none');}else{navbar?.classList.remove('shadow-md');backToTopBtn?.classList.add('opacity-0','pointer-events-none');}});
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+function filterCertificates(category){document.querySelectorAll('.cert-tab').forEach(tab=>{if(tab.dataset.category===category){tab.classList.add('bg-burgundy','text-white');tab.classList.remove('bg-white','text-slate-600');}else{tab.classList.remove('bg-burgundy','text-white');tab.classList.add('bg-white','text-slate-600');}});document.querySelectorAll('.cert-card').forEach(card=>card.style.display=(category==='all'||card.dataset.category===category)?'block':'none');}
+function openCertModal(title,desc,imgSrc){const modal=document.getElementById('cert-modal');if(!modal)return;document.getElementById('modal-title').textContent=title;document.getElementById('modal-desc').textContent=desc;document.getElementById('modal-img').src=imgSrc;modal.classList.remove('hidden');}
+function closeCertModal(){document.getElementById('cert-modal')?.classList.add('hidden');}
+function handleFormSubmit(e){e.preventDefault();const toast=document.getElementById('form-toast');if(toast)toast.classList.remove('hidden');e.target.reset();setTimeout(()=>toast?.classList.add('hidden'),5000);}
+</script>
+</body>
+</html>
